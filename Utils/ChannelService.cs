@@ -2,37 +2,22 @@ namespace Enhance.Utils;
 
 public static class ChannelService
 {
-    public static async Task ProcessResults(IAsyncEnumerable<int[]> results, double totalExecutionTime,
-        int totalFluorite, int totalBlessedScroll, int totalCrystal)
+    public static void ProcessResults((int Fluorite, int BlessedScroll, int Crystal)[] results,
+        double totalExecutionTime)
     {
-        var fluoriteResults = new List<int>();
-        var blessedScrollResults = new List<int>();
-        var crystalResults = new List<int>();
-        var simulationsCompleted = 0;
+        var totalFluorite = results.Sum(r => r.Fluorite);
+        var totalBlessedScroll = results.Sum(r => r.BlessedScroll);
+        var totalCrystal = results.Sum(r => r.Crystal);
 
-        await foreach (var result in results)
-        {
-            totalFluorite += result[0];
-            totalBlessedScroll += result[1];
-            totalCrystal += result[2];
-
-            fluoriteResults.Add(result[0]);
-            blessedScrollResults.Add(result[1]);
-            crystalResults.Add(result[2]);
-
-            simulationsCompleted++;
-            Console.WriteLine(
-                $"[Simulação {simulationsCompleted}] Finalizada! Recursos usados: Fluorite={result[0]}, BlessedScroll={result[1]}, Crystal={result[2]}");
-            Console.WriteLine("------------------------------------------------------");
-        }
+        var simulationsCompleted = results.Length;
 
         var averageFluorite = Calculate.Average(totalFluorite, simulationsCompleted);
         var averageBlessedScroll = Calculate.Average(totalBlessedScroll, simulationsCompleted);
         var averageCrystal = Calculate.Average(totalCrystal, simulationsCompleted);
 
-        var medianFluorite = Calculate.Median(fluoriteResults);
-        var medianBlessedScroll = Calculate.Median(blessedScrollResults);
-        var medianCrystal = Calculate.Median(crystalResults);
+        var medianFluorite = Calculate.Median(results.Select(r => r.Fluorite).ToList());
+        var medianBlessedScroll = Calculate.Median(results.Select(r => r.BlessedScroll).ToList());
+        var medianCrystal = Calculate.Median(results.Select(r => r.Crystal).ToList());
 
         Console.WriteLine($"Média de recursos consumidos após {simulationsCompleted} simulações:");
         Console.WriteLine($"Fluorite: {averageFluorite:F2} (Mediana: {medianFluorite})");

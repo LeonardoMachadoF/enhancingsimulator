@@ -6,17 +6,17 @@ public class InputInfo
 {
     public static InputInfoResponse Get()
     {
-        Console.WriteLine("Enter the starting enhancement level (9, 10, 11, 12): ");
+        Console.WriteLine("Refino inicial (9, 10, 11, 12): ");
         var startLevel = (EnhanceOptions)Enum.Parse(typeof(EnhanceOptions), Console.ReadLine());
 
-        Console.WriteLine("Enter the ending enhancement level (10, 11, 12, 13): ");
+        Console.WriteLine("Refino final (10, 11, 12, 13): ");
         var endLevel = (ToEnhanceOptions)Enum.Parse(typeof(ToEnhanceOptions), Console.ReadLine());
 
-        Console.WriteLine("Enter the number of simulations: ");
+        Console.WriteLine("Numero de simulações: ");
         var simulationsCount = int.Parse(Console.ReadLine());
 
         Console.WriteLine(
-            "Enter the levels where the hammer should be used (e.g., 12 for ToTwelve, separated by commas): ");
+            "Para quais leveis deve ser utilizado martelo (ex: 10,11 (separado por virgula)): ");
         var hammerLevelsInput = Console.ReadLine();
         var hammerLevels = string.IsNullOrEmpty(hammerLevelsInput)
             ? new List<ToEnhanceOptions>()

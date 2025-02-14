@@ -4,11 +4,11 @@ namespace Enhance;
 
 internal abstract class Program
 {
-    public static async Task Main(string[] args)
+    public static void Main(string[] args)
     {
         var inputData = InputInfo.Get();
 
-        await SimulateEnhancement.RunSimulation(
+        SimulateEnhancement.RunSimulation(
             inputData.StartLevel,
             inputData.EndLevel,
             inputData.SimulationsCount,
