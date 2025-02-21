@@ -1,0 +1,15 @@
+C:\Users\apeju\OneDrive\Área de Trabalho\Projetos\NovelPL\Enhance\bin\Release\net9.0\win-x64\Enhance.exe
+C:\Users\apeju\OneDrive\Área de Trabalho\Projetos\NovelPL\Enhance\bin\Release\net9.0\win-x64\Enhance.deps.json
+C:\Users\apeju\OneDrive\Área de Trabalho\Projetos\NovelPL\Enhance\bin\Release\net9.0\win-x64\Enhance.runtimeconfig.json
+C:\Users\apeju\OneDrive\Área de Trabalho\Projetos\NovelPL\Enhance\bin\Release\net9.0\win-x64\Enhance.dll
+C:\Users\apeju\OneDrive\Área de Trabalho\Projetos\NovelPL\Enhance\bin\Release\net9.0\win-x64\Enhance.pdb
+C:\Users\apeju\OneDrive\Área de Trabalho\Projetos\NovelPL\Enhance\obj\Release\net9.0\win-x64\Enhance.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\apeju\OneDrive\Área de Trabalho\Projetos\NovelPL\Enhance\obj\Release\net9.0\win-x64\Enhance.AssemblyInfoInputs.cache
+C:\Users\apeju\OneDrive\Área de Trabalho\Projetos\NovelPL\Enhance\obj\Release\net9.0\win-x64\Enhance.AssemblyInfo.cs
+C:\Users\apeju\OneDrive\Área de Trabalho\Projetos\NovelPL\Enhance\obj\Release\net9.0\win-x64\Enhance.csproj.CoreCompileInputs.cache
+C:\Users\apeju\OneDrive\Área de Trabalho\Projetos\NovelPL\Enhance\obj\Release\net9.0\win-x64\Enhance.sourcelink.json
+C:\Users\apeju\OneDrive\Área de Trabalho\Projetos\NovelPL\Enhance\obj\Release\net9.0\win-x64\Enhance.dll
+C:\Users\apeju\OneDrive\Área de Trabalho\Projetos\NovelPL\Enhance\obj\Release\net9.0\win-x64\refint\Enhance.dll
+C:\Users\apeju\OneDrive\Área de Trabalho\Projetos\NovelPL\Enhance\obj\Release\net9.0\win-x64\Enhance.pdb
+C:\Users\apeju\OneDrive\Área de Trabalho\Projetos\NovelPL\Enhance\obj\Release\net9.0\win-x64\Enhance.genruntimeconfig.cache
+C:\Users\apeju\OneDrive\Área de Trabalho\Projetos\NovelPL\Enhance\obj\Release\net9.0\win-x64\ref\Enhance.dll

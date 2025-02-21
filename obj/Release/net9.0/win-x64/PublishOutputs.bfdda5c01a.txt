@@ -1,0 +1,5 @@
+C:\Users\apeju\OneDrive\Área de Trabalho\Projetos\NovelPL\Enhance\bin\Release\net9.0\win-x64\publish\Enhance.exe
+C:\Users\apeju\OneDrive\Área de Trabalho\Projetos\NovelPL\Enhance\bin\Release\net9.0\win-x64\publish\Enhance.dll
+C:\Users\apeju\OneDrive\Área de Trabalho\Projetos\NovelPL\Enhance\bin\Release\net9.0\win-x64\publish\Enhance.deps.json
+C:\Users\apeju\OneDrive\Área de Trabalho\Projetos\NovelPL\Enhance\bin\Release\net9.0\win-x64\publish\Enhance.runtimeconfig.json
+C:\Users\apeju\OneDrive\Área de Trabalho\Projetos\NovelPL\Enhance\bin\Release\net9.0\win-x64\publish\Enhance.pdb
