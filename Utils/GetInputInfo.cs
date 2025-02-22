@@ -12,6 +12,9 @@ public class InputInfo
         Console.WriteLine("Refino final (10, 11, 12, 13): ");
         var endLevel = (ToEnhanceOptions)Enum.Parse(typeof(ToEnhanceOptions), Console.ReadLine());
 
+        Console.WriteLine("Numero de tentativas: ");
+        var tryCount = int.Parse(Console.ReadLine());
+
         Console.WriteLine("Numero de simulações: ");
         var simulationsCount = int.Parse(Console.ReadLine());
 
@@ -31,6 +34,7 @@ public class InputInfo
         {
             StartLevel = startLevel,
             EndLevel = endLevel,
+            TryCount = tryCount,
             SimulationsCount = simulationsCount,
             HammerLevels = hammerLevels
         };
@@ -41,6 +45,7 @@ public record InputInfoResponse
 {
     public EnhanceOptions StartLevel { get; set; }
     public ToEnhanceOptions EndLevel { get; set; }
+    public int TryCount { get; set; }
     public int SimulationsCount { get; set; }
     public List<ToEnhanceOptions> HammerLevels { get; set; }
 }

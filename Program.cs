@@ -11,6 +11,7 @@ internal abstract class Program
         SimulateEnhancement.RunSimulation(
             inputData.StartLevel,
             inputData.EndLevel,
+            inputData.TryCount,
             inputData.SimulationsCount,
             inputData.HammerLevels
         );
