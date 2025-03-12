@@ -9,6 +9,16 @@ public static class DefaultEnhanceChance
         var enhancementRates = new Dictionary<ToEnhanceOptions, Dictionary<EnhancePossibleResults, double>>
         {
             {
+                ToEnhanceOptions.ToNine,
+                new Dictionary<EnhancePossibleResults, double>
+                {
+                    { EnhancePossibleResults.Success, hammer ? 4 : 2 },
+                    { EnhancePossibleResults.Destroy, 20.0 },
+                    { EnhancePossibleResults.NoChange, 10.0 },
+                    { EnhancePossibleResults.Downgrade, 0 }
+                }
+            },
+            {
                 ToEnhanceOptions.ToTen,
                 new Dictionary<EnhancePossibleResults, double>
                 {
@@ -57,6 +67,7 @@ public static class DefaultEnhanceChance
     {
         return new Dictionary<ToEnhanceOptions, int>
         {
+            { ToEnhanceOptions.ToNine, 90 },
             { ToEnhanceOptions.ToTen, 180 },
             { ToEnhanceOptions.ToEleven, 270 }
         };

@@ -1,8 +1,8 @@
 namespace Enhance.Utils;
 
-public static class ChannelService
+public static class EnhanceService
 {
-    public static void ProcessResults((int Fluorite, int BlessedScroll, int Crystal)[] results, int tryCount,
+    public static void ExportInfo((int Fluorite, int BlessedScroll, int Crystal)[] results, int tryCount,
         double totalExecutionTime)
     {
         var totalFluorite = results.Sum(r => r.Fluorite);

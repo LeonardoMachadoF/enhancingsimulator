@@ -6,7 +6,7 @@ namespace Enhance;
 
 public static class SimulateEnhancement
 {
-    public static void RunSimulation(EnhanceOptions start, ToEnhanceOptions end, int tryCount,int numberOfSimulations,
+    public static void RunSimulation(EnhanceOptions start, ToEnhanceOptions end, int tryCount, int numberOfSimulations,
         List<ToEnhanceOptions> hammerLevels)
     {
         var stopwatch = Stopwatch.StartNew();
@@ -57,6 +57,6 @@ public static class SimulateEnhancement
         });
 
         stopwatch.Stop();
-        ChannelService.ProcessResults(results, tryCount, stopwatch.Elapsed.TotalSeconds);
+        EnhanceService.ExportInfo(results, tryCount, stopwatch.Elapsed.TotalSeconds);
     }
 }
