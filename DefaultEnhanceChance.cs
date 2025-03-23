@@ -32,7 +32,7 @@ public static class DefaultEnhanceChance
                 ToEnhanceOptions.ToEleven,
                 new Dictionary<EnhancePossibleResults, double>
                 {
-                    { EnhancePossibleResults.Success, hammer ? 1.4 : 0.7 },
+                    { EnhancePossibleResults.Success, hammer ? 1.47 : 0.735 },
                     { EnhancePossibleResults.Destroy, 35.3 },
                     { EnhancePossibleResults.NoChange, 7.0 },
                     { EnhancePossibleResults.Downgrade, 0 }

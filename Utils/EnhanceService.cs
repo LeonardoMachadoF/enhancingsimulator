@@ -1,3 +1,5 @@
+using System.Text;
+
 namespace Enhance.Utils;
 
 public static class EnhanceService
@@ -21,11 +23,22 @@ public static class EnhanceService
 
         var spentMoreFluoriteThan = (double)results.Count(r => r.Fluorite > tryCount) / simulationsCompleted * 100;
 
+        var sortedFluorite = results.Select(r => r.Fluorite).OrderBy(f => f).ToList();
+        var percentiles = new Dictionary<int, double>();
+        for (var i = 10; i <= 100; i += 10)
+            percentiles[i] =
+                sortedFluorite[Math.Min((int)(i / 100.0 * simulationsCompleted), simulationsCompleted - 1)];
+
+
         Console.WriteLine($"Média de recursos consumidos após {simulationsCompleted} simulações:");
         Console.WriteLine($"Fluorite: {averageFluorite:F2} (Mediana: {medianFluorite})");
         Console.WriteLine($"BlessedScroll: {averageBlessedScroll:F2} (Mediana: {medianBlessedScroll})");
         Console.WriteLine($"Crystal: {averageCrystal:F2} (Mediana: {medianCrystal})");
         Console.WriteLine($"{spentMoreFluoriteThan.ToString("F2")}% gastaram mais que {tryCount} fluorites.");
+        var percentilesString = new StringBuilder();
+        foreach (var percentile in percentiles)
+            percentilesString.Append($"| {percentile.Key}%: {percentile.Value:F2} ");
+        Console.WriteLine(percentilesString.ToString());
         Console.WriteLine($"Tempo total de execução: {totalExecutionTime:F2} segundos");
     }
 }
