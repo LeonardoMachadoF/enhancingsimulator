@@ -25,7 +25,7 @@ public static class EnhanceService
 
         var sortedFluorite = results.Select(r => r.Fluorite).OrderBy(f => f).ToList();
         var percentiles = new Dictionary<int, double>();
-        for (var i = 10; i <= 100; i += 10)
+        for (var i = 10; i <= 100; i += 1)
             percentiles[i] =
                 sortedFluorite[Math.Min((int)(i / 100.0 * simulationsCompleted), simulationsCompleted - 1)];
 
@@ -37,7 +37,7 @@ public static class EnhanceService
         Console.WriteLine($"{spentMoreFluoriteThan.ToString("F2")}% gastaram mais que {tryCount} fluorites.");
         var percentilesString = new StringBuilder();
         foreach (var percentile in percentiles)
-            percentilesString.Append($"| {percentile.Key}%: {percentile.Value:F2} ");
+            percentilesString.Append($"{percentile.Key}%: {percentile.Value}f | ");
         Console.WriteLine(percentilesString.ToString());
         Console.WriteLine($"Tempo total de execução: {totalExecutionTime:F2} segundos");
     }
