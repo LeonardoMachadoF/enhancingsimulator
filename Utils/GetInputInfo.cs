@@ -6,20 +6,20 @@ public class InputInfo
 {
     public static InputInfoResponse Get()
     {
-        Console.WriteLine("Refino inicial (9, 10, 11, 12): ");
+        Console.WriteLine("Refino inicial (8, 9, 10, 11, 12): ");
         var startLevel = (EnhanceOptions)Enum.Parse(typeof(EnhanceOptions), Console.ReadLine());
 
-        Console.WriteLine("Refino final (10, 11, 12, 13): ");
+        Console.WriteLine("Refino final (9, 10, 11, 12, 13): ");
         var endLevel = (ToEnhanceOptions)Enum.Parse(typeof(ToEnhanceOptions), Console.ReadLine());
 
-        Console.WriteLine("Numero de tentativas: ");
+        Console.WriteLine("Numero de fluorite teste: ");
         var tryCount = int.Parse(Console.ReadLine());
 
         Console.WriteLine("Numero de simulações: ");
         var simulationsCount = int.Parse(Console.ReadLine());
 
         Console.WriteLine(
-            "Para quais leveis deve ser utilizado martelo (ex: 10,11 (separado por virgula)): ");
+            "Para quais leveis deve ser utilizado martelo (ex: 9,10,11 (separado por virgula)): ");
         var hammerLevelsInput = Console.ReadLine();
         var hammerLevels = string.IsNullOrEmpty(hammerLevelsInput)
             ? new List<ToEnhanceOptions>()
